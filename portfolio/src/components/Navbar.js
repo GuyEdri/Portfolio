@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <ul className={classes.nav}>
-        <li className={classes.navFirstEl}>Guy Edri</li>
+        <span className={classes.navFirstEl}>Guy Edri</span>
         <li>
           <a href="#pastWork">Past Work</a>
         </li>
@@ -14,8 +14,10 @@ const Navbar = () => {
         <li>
           <a href="#testimonials">Testimonials</a>
         </li>
-        <li className={classes.hire}>
-          <a href="#hireMe">Hire Me &#8594;</a>
+        <li className={classes.marginRight}>
+          <a className={classes.hire} href="#hireMe">
+            Hire Me &#8594;
+          </a>
         </li>
       </ul>
     </Fragment>
