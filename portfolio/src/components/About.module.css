@@ -1,0 +1,57 @@
+.container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin: 9rem 0 0 8rem;
+  padding: 2rem;
+  border-radius: 9px;
+  border: 1px solid rgb(188 188 245);
+  box-shadow: 0px 0px 9px 0 rgb(188 188 245);
+  margin-bottom: 2rem;
+}
+.img {
+  width: 100%;
+  border-radius: 9px;
+  padding: 1rem 0 0 0;
+  background-color: rgb(30 39 60);
+}
+.about {
+  margin-left: 4rem;
+  background-color: rgb(26, 28, 41);
+}
+.aboutHeader {
+  font-size: 64px;
+}
+.aboutText {
+  color: rgb(188 188 245);
+}
+
+.flex {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0 2rem 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+}
+
+li a {
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: rgb(188 188 245);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+li a:hover::after {
+  width: 100%;
+}

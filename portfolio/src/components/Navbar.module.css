@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
   background-color: rgb(26, 28, 41);
+  color: #fff;
 }
 
 .nav {
@@ -16,7 +17,6 @@
   list-style: none;
   background: rgb(30 39 60);
   padding: 1rem;
-  position: sticky;
 }
 
 .navFirstEl {
@@ -30,20 +30,30 @@
   color: rgb(188 188 245);
 }
 
-.nav li {
+nav li {
   background: rgb(30 39 60);
+  position: relative;
 }
-.nav li:hover {
-  transition: 0.3s;
-  transform: translateY(-2px);
-}
-.nav li a {
+
+nav li a {
   background: rgb(30 39 60);
   text-decoration: none;
-  color: rgb(188 188 245);
-}
-.nav li a:hover {
   color: #fff;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: rgb(188 188 245);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav li a:hover::after {
+  width: 100%;
 }
 
 .hire {
