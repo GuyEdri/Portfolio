@@ -5,24 +5,21 @@ const About = () => {
   const [skillStatus, updateSkillStatus] = useState(false);
   const [experienceStatus, updateExperienceStatus] = useState(false);
   const [educationStatus, updateEducationStatus] = useState(false);
-  console.log("start");
+
   const skillHandler = () => {
     updateSkillStatus(true);
     updateEducationStatus(false);
     updateExperienceStatus(false);
-    console.log("function");
   };
   const experienceHandler = () => {
     updateSkillStatus(false);
     updateEducationStatus(false);
     updateExperienceStatus(true);
-    console.log("function 2");
   };
   const educationHandler = () => {
     updateSkillStatus(false);
     updateExperienceStatus(false);
     updateEducationStatus(true);
-    console.log("function 3");
   };
 
   return (
