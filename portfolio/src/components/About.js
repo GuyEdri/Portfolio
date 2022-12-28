@@ -2,6 +2,29 @@ import { useState, Fragment } from "react";
 import classes from "./About.module.css";
 import cardImg from "../img/Hero.png";
 const About = () => {
+  const [skillStatus, updateSkillStatus] = useState(false);
+  const [experienceStatus, updateExperienceStatus] = useState(false);
+  const [educationStatus, updateEducationStatus] = useState(false);
+  console.log("start");
+  const skillHandler = () => {
+    updateSkillStatus(true);
+    updateEducationStatus(false);
+    updateExperienceStatus(false);
+    console.log("function");
+  };
+  const experienceHandler = () => {
+    updateSkillStatus(false);
+    updateEducationStatus(false);
+    updateExperienceStatus(true);
+    console.log("function 2");
+  };
+  const educationHandler = () => {
+    updateSkillStatus(false);
+    updateExperienceStatus(false);
+    updateEducationStatus(true);
+    console.log("function 3");
+  };
+
   return (
     <Fragment>
       <section className={classes.container}>
@@ -15,7 +38,6 @@ const About = () => {
               <a href="#a" onClick={skillHandler}>
                 Skills
               </a>
-              {skillStatus && skillHandler}
             </li>
             <li>
               <a href="#b" onClick={experienceHandler}>
@@ -28,6 +50,24 @@ const About = () => {
               </a>
             </li>
           </ul>
+          {skillStatus && (
+            <div>
+              <h2>Frontend</h2>
+              <span>WelloWow~</span>
+            </div>
+          )}
+          {experienceStatus && (
+            <div>
+              <h2>Backend</h2>
+              <span>WelloWow~</span>
+            </div>
+          )}
+          {educationStatus && (
+            <div>
+              <h2>Fullstack</h2>
+              <span>WelloWow~</span>
+            </div>
+          )}
         </div>
       </section>
     </Fragment>
