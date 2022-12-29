@@ -1,5 +1,6 @@
 .container {
-  width: 90%;
+  width: 85%;
+  height: 30rem;
   display: grid;
   grid-template-columns: 20% 80%;
   margin: 9rem 0 0 8rem;
@@ -11,6 +12,7 @@
 }
 .img {
   width: 100%;
+  height: 100%;
   border-radius: 9px;
   padding: 1rem 0 0 0;
   background-color: rgb(30 39 60);
@@ -26,7 +28,7 @@
   color: rgb(188 188 245);
 }
 
-.flex {
+.tabTitles {
   display: flex;
   gap: 3rem;
   margin: 2rem 0 2rem 0;
@@ -39,6 +41,7 @@ li {
 
 li a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul li a::after {
@@ -51,7 +54,24 @@ ul li a::after {
   bottom: -6px;
   transition: 0.5s;
 }
+.activeLink::after {
+  width: 100%;
+}
 
 li a:hover::after {
   width: 100%;
+}
+
+.see {
+  line-height: 1.5rem;
+}
+.seeHeader {
+  color: rgb(166 143 249);
+  font-size: medium;
+  letter-spacing: 0.05rem;
+}
+
+.marginbot {
+  display: block;
+  margin-bottom: 0.8rem;
 }

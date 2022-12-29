@@ -2,7 +2,7 @@ import { useState, Fragment } from "react";
 import classes from "./About.module.css";
 import cardImg from "../img/Hero.png";
 const About = () => {
-  const [skillStatus, updateSkillStatus] = useState(false);
+  const [skillStatus, updateSkillStatus] = useState(true);
   const [experienceStatus, updateExperienceStatus] = useState(false);
   const [educationStatus, updateEducationStatus] = useState(false);
 
@@ -28,41 +28,61 @@ const About = () => {
         <img src={cardImg} alt="Profile" className={classes.img}></img>
         <div className={classes.about}>
           <h1 className={classes.aboutHeader}>About Me</h1>
-          <p className={classes.aboutText}>Lorem ipsum dolor sit</p>
+          <p className={classes.aboutText}>שמן מניאק</p>
 
-          <ul className={classes.flex}>
+          <ul className={classes.tabTitles}>
             <li>
-              <a href="#a" onClick={skillHandler}>
+              <a
+                href="#a"
+                onClick={skillHandler}
+                className={skillStatus && classes.activeLink}
+              >
                 Skills
               </a>
             </li>
             <li>
-              <a href="#b" onClick={experienceHandler}>
+              <a
+                href="#b"
+                onClick={experienceHandler}
+                className={experienceStatus && classes.activeLink}
+              >
                 Experience
               </a>
             </li>
             <li>
-              <a href="#c" onClick={educationHandler}>
+              <a
+                href="#c"
+                onClick={educationHandler}
+                className={educationStatus && classes.activeLink}
+              >
                 Education
               </a>
             </li>
           </ul>
           {skillStatus && (
-            <div>
-              <h2>Frontend</h2>
-              <span>WelloWow~</span>
+            <div className={classes.see}>
+              <p className={classes.seeHeader}>UI/UX</p>
+              <span className={classes.marginbot}>
+                Designing Web/App interfaces
+              </span>
+              <p className={classes.seeHeader}>Web Development</p>
+              <span className={classes.marginbot}>Web app Development</span>
+              <p className={classes.seeHeader}>App Development</p>
+              <span className={classes.marginbot}>
+                Building Android/IOS apps
+              </span>
             </div>
           )}
           {experienceStatus && (
-            <div>
-              <h2>Backend</h2>
-              <span>WelloWow~</span>
+            <div className={classes.see}>
+              <p className={classes.seeHeader}>None</p>
+              <span className={classes.marginbot}>None</span>
             </div>
           )}
           {educationStatus && (
-            <div>
-              <h2>Fullstack</h2>
-              <span>WelloWow~</span>
+            <div className={classes.see}>
+              <p className={classes.seeHeader}>2019-2022</p>
+              <span>Practical Software Engineering Student</span>
             </div>
           )}
         </div>
