@@ -1,16 +1,35 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import classes from "./Navbar.module.css";
+import Scrolling from "./Scrolling";
+
 const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState();
+  const scrollToPastWork = () => {
+    setScrollPosition(1500);
+  };
+  const scrollToSkills = () => {
+    setScrollPosition(800);
+  };
+  const scrollToTop = () => {
+    setScrollPosition(1);
+  };
   return (
     <Fragment>
-      <nav>
+      <nav className={classes.mainClass}>
+        <button className={classes.button} onClick={scrollToTop}>
+          &uarr;
+        </button>
         <ul className={classes.nav}>
           <span className={classes.navFirstEl}>Guy Edri</span>
           <li>
-            <a href="#pastWork">Past Work</a>
+            <a href="#pastWork" onClick={scrollToPastWork}>
+              Past Work
+            </a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a href="#skills" onClick={scrollToSkills}>
+              Skills
+            </a>
           </li>
           <li>
             <a href="#testimonials">Testimonials</a>
@@ -22,6 +41,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <Scrolling position={scrollPosition} />
     </Fragment>
   );
 };

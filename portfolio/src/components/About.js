@@ -3,22 +3,22 @@ import classes from "./About.module.css";
 import cardImg from "../img/Hero.png";
 const About = () => {
   const [skillStatus, updateSkillStatus] = useState(true);
-  const [experienceStatus, updateExperienceStatus] = useState(false);
-  const [educationStatus, updateEducationStatus] = useState(false);
+  const [experienceStatus, updateExperienceStatus] = useState("");
+  const [educationStatus, updateEducationStatus] = useState("");
 
   const skillHandler = () => {
     updateSkillStatus(true);
-    updateEducationStatus(false);
-    updateExperienceStatus(false);
+    updateEducationStatus("");
+    updateExperienceStatus("");
   };
   const experienceHandler = () => {
-    updateSkillStatus(false);
-    updateEducationStatus(false);
+    updateSkillStatus("");
+    updateEducationStatus("");
     updateExperienceStatus(true);
   };
   const educationHandler = () => {
-    updateSkillStatus(false);
-    updateExperienceStatus(false);
+    updateSkillStatus("");
+    updateExperienceStatus("");
     updateEducationStatus(true);
   };
 

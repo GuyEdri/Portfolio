@@ -8,7 +8,7 @@
   border-radius: 9px;
   border: 1px solid rgb(188 188 245);
   box-shadow: 0px 0px 9px 0 rgb(188 188 245);
-  margin-bottom: 2rem;
+  margin-bottom: 9.6rem;
 }
 .img {
   width: 100%;
@@ -22,7 +22,8 @@
   background-color: rgb(26, 28, 41);
 }
 .aboutHeader {
-  font-size: 64px;
+  font-size: 4rem;
+  text-shadow: 0px 0px 3px #fff;
 }
 .aboutText {
   color: rgb(188 188 245);

@@ -12,6 +12,49 @@
   color: #fff;
 }
 
+.button {
+  position: fixed;
+  bottom: 1%;
+  right: 0.5%;
+  width: 4rem;
+  height: 4rem;
+  color: rgb(166 143 249);
+  border: 1px solid rgb(166 143 249);
+  border-radius: 9px;
+  box-shadow: 0px 0px 5px 0 rgb(188 188 245);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-15px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-1px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
 .nav {
   display: flex;
   gap: 2rem;
