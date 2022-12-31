@@ -79,13 +79,13 @@ nav li {
   position: relative;
 }
 
-nav li a {
+nav li span {
   background: rgb(30 39 60);
   text-decoration: none;
   color: #fff;
 }
 
-nav ul li a::after {
+nav ul li span::after {
   content: "";
   width: 0;
   height: 2px;
@@ -96,7 +96,7 @@ nav ul li a::after {
   transition: 0.5s;
 }
 
-nav li a:hover::after {
+nav li span:hover::after {
   width: 100%;
 }
 

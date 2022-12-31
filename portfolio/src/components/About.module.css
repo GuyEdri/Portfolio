@@ -40,12 +40,12 @@ li {
   position: relative;
 }
 
-li a {
+li span {
   text-decoration: none;
   cursor: pointer;
 }
 
-ul li a::after {
+ul li span::after {
   content: "";
   width: 0;
   height: 2px;
@@ -59,7 +59,7 @@ ul li a::after {
   width: 100%;
 }
 
-li a:hover::after {
+li span:hover::after {
   width: 100%;
 }
 

@@ -32,31 +32,28 @@ const About = () => {
 
           <ul className={classes.tabTitles}>
             <li>
-              <a
-                href="#a"
+              <span
                 onClick={skillHandler}
                 className={skillStatus && classes.activeLink}
               >
                 Skills
-              </a>
+              </span>
             </li>
             <li>
-              <a
-                href="#b"
+              <span
                 onClick={experienceHandler}
                 className={experienceStatus && classes.activeLink}
               >
                 Experience
-              </a>
+              </span>
             </li>
             <li>
-              <a
-                href="#c"
+              <span
                 onClick={educationHandler}
                 className={educationStatus && classes.activeLink}
               >
                 Education
-              </a>
+              </span>
             </li>
           </ul>
           {skillStatus && (

@@ -22,22 +22,16 @@ const Navbar = () => {
         <ul className={classes.nav}>
           <span className={classes.navFirstEl}>Guy Edri</span>
           <li>
-            <a href="#pastWork" onClick={scrollToPastWork}>
-              Past Work
-            </a>
+            <span onClick={scrollToPastWork}>Past Work</span>
           </li>
           <li>
-            <a href="#skills" onClick={scrollToSkills}>
-              Skills
-            </a>
+            <span onClick={scrollToSkills}>Skills</span>
           </li>
           <li>
-            <a href="#testimonials">Testimonials</a>
+            <span>Testimonials</span>
           </li>
           <li className={classes.marginRight}>
-            <a className={classes.hire} href="#hireMe">
-              Hire Me &#8594;
-            </a>
+            <span className={classes.hire}>Hire Me &#8594;</span>
           </li>
         </ul>
       </nav>
