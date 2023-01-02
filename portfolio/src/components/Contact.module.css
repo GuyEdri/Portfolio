@@ -1,24 +1,94 @@
 .container {
   display: grid;
   grid-template-columns: 40% 53%;
-  margin: 0 0 9.6rem 8rem;
+  margin: 0 7rem 9.6rem 7rem;
   background: rgb(30 39 60);
-  border: 1px solid rgb(30 39 60);
+  padding: 4rem;
+  border-radius: 9px;
+}
+.container:hover {
+  box-shadow: 0px 0px 12px 0 rgb(188 188 245);
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background: rgb(30 39 60);
+}
+.background {
+  background: inherit;
+  text-decoration: none;
+}
+
+.input {
+  height: 4rem;
+  border-radius: 9px;
+  margin-right: 6rem;
+  padding-left: 2rem;
+}
+.input::placeholder {
+  color: rgb(166 143 249);
+}
+
+.textarea {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  margin-right: 6rem;
+  border-radius: 9px;
+}
+.textarea::placeholder {
+  color: rgb(166 143 249);
+}
+.button {
+  width: 8rem;
+  height: 3rem;
+  color: rgb(166 143 249);
+  background: rgb(26, 28, 41);
+  border: 1px solid rgb(166 143 249);
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.01);
+  text-shadow: 0px 0px 3px rgb(166 143 249);
+  box-shadow: inset 0 0 8px rgb(166 143 249);
 }
 
 .contactFill {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background: rgb(30 39 60);
 }
 
 .header {
   font-size: 4rem;
   text-shadow: 0px 0px 3px #fff;
+  background: rgb(30 39 60);
+  margin-top: 2rem;
+}
+
+.icon {
+  margin-right: 2rem;
+  fill: rgb(166 143 249);
+  width: 2rem;
+  height: 2rem;
+  background: rgb(30 39 60);
+  transform: translateY(25%);
+}
+
+.socialIconContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: rgb(30 39 60);
+}
+.socialIcon {
+  width: 2rem;
+  height: 2rem;
+  background: rgb(30 39 60);
+}
+.socialIcon:hover {
+  fill: rgb(166 143 249);
+  cursor: pointer;
 }

@@ -1,13 +1,4 @@
-import * as Scroll from "react-scroll";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 const Scrolling = (props) => {
   var Scroll = require("react-scroll");
   var scroll = Scroll.animateScroll;

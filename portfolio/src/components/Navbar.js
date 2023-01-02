@@ -4,12 +4,16 @@ import Scrolling from "./Scrolling";
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState();
+  const scrollToHireMe = () => {
+    setScrollPosition(2300);
+  };
   const scrollToPastWork = () => {
     setScrollPosition(1500);
   };
   const scrollToSkills = () => {
     setScrollPosition(800);
   };
+
   const scrollToTop = () => {
     setScrollPosition(1);
   };
@@ -27,11 +31,10 @@ const Navbar = () => {
           <li>
             <span onClick={scrollToSkills}>Skills</span>
           </li>
-          <li>
-            <span>Testimonials</span>
-          </li>
           <li className={classes.marginRight}>
-            <span className={classes.hire}>Hire Me &#8594;</span>
+            <span onClick={scrollToHireMe} className={classes.hire}>
+              Hire Me &#8594;
+            </span>
           </li>
         </ul>
       </nav>

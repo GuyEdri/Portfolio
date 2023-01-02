@@ -28,7 +28,11 @@ const About = () => {
         <img src={cardImg} alt="Profile" className={classes.img}></img>
         <div className={classes.about}>
           <h1 className={classes.aboutHeader}>About Me</h1>
-          <p className={classes.aboutText}>שמן מניאק</p>
+          <p className={classes.aboutText}>
+            Hi, My name is Guy, I am 28 years old, Practical software engineer
+            very interested in web development. Looking for a junior web
+            developer position
+          </p>
 
           <ul className={classes.tabTitles}>
             <li>

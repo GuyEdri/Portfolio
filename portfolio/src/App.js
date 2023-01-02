@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,7 +6,6 @@ import WorkCard from "./components/WorkCard";
 import Contact from "./components/Contact";
 import cardImg from "./img/Hero.png";
 import Scrolling from "./components/Scrolling";
-import { SocialIcon } from "react-social-icons";
 
 const card = [
   {
