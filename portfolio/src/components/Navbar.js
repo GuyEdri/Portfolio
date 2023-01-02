@@ -28,10 +28,10 @@ const Navbar = () => {
             Guy Edri
           </span>
           <li>
-            <span onClick={scrollToPastWork}>Past Work</span>
+            <span onClick={scrollToSkills}>Skills</span>
           </li>
           <li>
-            <span onClick={scrollToSkills}>Skills</span>
+            <span onClick={scrollToPastWork}>Past Work</span>
           </li>
           <li className={classes.marginRight}>
             <span onClick={scrollToHireMe} className={classes.hire}>
