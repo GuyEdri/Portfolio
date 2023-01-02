@@ -15,6 +15,21 @@ const Contact = () => {
     reply_to: "",
   });
 
+  // Function will execute on click of button
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("Guy Edri Resume-5.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Guy Edri Resume-5.pdf";
+        alink.click();
+      });
+    });
+  };
   function submitHandler(event) {
     event.preventDefault();
     send("default_service", "template_x9xvp88", toSend, "kifxK0QyuAIAYL8dV")
@@ -76,6 +91,9 @@ const Contact = () => {
               <FaLinkedin className={classes.socialIcon} />
             </a>
           </div>
+          <button className={classes.button} onClick={onButtonClick}>
+            Download CV
+          </button>
         </div>
 
         <form onSubmit={submitHandler}>
