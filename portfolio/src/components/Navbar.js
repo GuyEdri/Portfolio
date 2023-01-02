@@ -11,7 +11,7 @@ const Navbar = () => {
     setScrollPosition(1500);
   };
   const scrollToSkills = () => {
-    setScrollPosition(800);
+    setScrollPosition(900);
   };
 
   const scrollToTop = () => {
@@ -24,7 +24,9 @@ const Navbar = () => {
           &uarr;
         </button>
         <ul className={classes.nav}>
-          <span className={classes.navFirstEl}>Guy Edri</span>
+          <span className={classes.navFirstEl} onClick={scrollToTop}>
+            Guy Edri
+          </span>
           <li>
             <span onClick={scrollToPastWork}>Past Work</span>
           </li>
