@@ -62,7 +62,7 @@ const Contact = () => {
           <div className={classes.background}>
             <FaPhoneSquareAlt className={classes.icon} />
             <a className={classes.background} href="tel:0522255447">
-              0522255447
+              052-2255447
             </a>
           </div>
           <div className={classes.socialIconContainer}>
