@@ -83,7 +83,7 @@ const About = () => {
           {educationStatus && (
             <div className={classes.see}>
               <p className={classes.seeHeader}>2019-2022</p>
-              <span>Practical Software Engineering Student</span>
+              <span>Practical Software Engineer</span>
             </div>
           )}
         </div>
