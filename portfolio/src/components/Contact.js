@@ -141,7 +141,7 @@ const Contact = () => {
               value={toSend.message}
               onChange={handleChange}
             ></textarea>
-            <Button>Send</Button>
+            <Button type="submit">Send</Button>
           </div>
         </form>
       </div>
