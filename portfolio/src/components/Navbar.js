@@ -7,9 +7,7 @@ const Navbar = () => {
   const scrollToHireMe = () => {
     setScrollPosition(2300);
   };
-  const scrollToPastWork = () => {
-    setScrollPosition(1500);
-  };
+
   const scrollToSkills = () => {
     setScrollPosition(900);
   };
@@ -31,7 +29,7 @@ const Navbar = () => {
             <span onClick={scrollToSkills}>Skills</span>
           </li>
           <li>
-            <span onClick={scrollToPastWork}>Past Work</span>
+            <span>Projects</span>
           </li>
           <li className={classes.marginRight}>
             <span onClick={scrollToHireMe} className={classes.hire}>
