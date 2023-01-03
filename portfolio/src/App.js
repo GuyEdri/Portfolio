@@ -5,12 +5,14 @@ import About from "./components/About";
 import WorkCard from "./components/WorkCard";
 import Contact from "./components/Contact";
 import cardImg from "./img/Hero.png";
+import cakeSite from "./img/cakeSite.png";
 import Scrolling from "./components/Scrolling";
 
 const card = [
   {
-    img: cardImg,
+    img: cakeSite,
     id: Math.random(),
+    link: "https://ortiscake.netlify.app/",
   },
   {
     img: cardImg,
@@ -29,7 +31,7 @@ function App() {
       <Scrolling />
       <Hero />
       <About />
-      <WorkCard cards={card} />
+      {/* <WorkCard cards={card} /> */}
       <Contact />
     </Fragment>
   );

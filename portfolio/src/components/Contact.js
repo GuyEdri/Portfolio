@@ -1,5 +1,7 @@
 import { Fragment, useState } from "react";
 import { send } from "emailjs-com";
+import Modal from "../UI/Modal";
+import Button from "../UI/Button";
 import {
   FaPaperPlane,
   FaPhoneSquareAlt,
@@ -9,20 +11,18 @@ import {
 } from "react-icons/fa";
 import classes from "./Contact.module.css";
 const Contact = () => {
+  const [modal, setModal] = useState(null);
+
   const [toSend, setToSend] = useState({
     from_name: "",
     message: "",
     reply_to: "",
   });
 
-  // Function will execute on click of button
   const onButtonClick = () => {
-    // using Java Script method to get PDF file
     fetch("Guy Edri Resume-5.pdf").then((response) => {
       response.blob().then((blob) => {
-        // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
         alink.download = "Guy Edri Resume-5.pdf";
@@ -35,6 +35,7 @@ const Contact = () => {
     send("default_service", "template_x9xvp88", toSend, "kifxK0QyuAIAYL8dV")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setModal(true);
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -49,8 +50,19 @@ const Contact = () => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
+  const modalHandler = () => {
+    setModal(null);
+  };
+
   return (
     <Fragment>
+      {modal && (
+        <Modal
+          title="Mail sent"
+          message="Thanks for the opportunity!, I will do my best!"
+          onConfirm={modalHandler}
+        />
+      )}
       <div className={classes.container}>
         <div className={classes.contactInfo}>
           <h1 className={classes.header}>Contact Me</h1>
@@ -91,9 +103,7 @@ const Contact = () => {
               <FaLinkedin className={classes.socialIcon} />
             </a>
           </div>
-          <button className={classes.button} onClick={onButtonClick}>
-            Download CV
-          </button>
+          <Button onClick={onButtonClick}>Download CV</Button>
         </div>
 
         <form onSubmit={submitHandler}>
@@ -131,7 +141,7 @@ const Contact = () => {
               value={toSend.message}
               onChange={handleChange}
             ></textarea>
-            <button className={classes.button}>Send</button>
+            <Button>Send</Button>
           </div>
         </form>
       </div>

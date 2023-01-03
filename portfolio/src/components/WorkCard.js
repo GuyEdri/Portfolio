@@ -9,11 +9,13 @@ const WorkCard = (props) => {
         {props.cards.map((card) => {
           return (
             <div className={classes.card} key={card.id}>
-              <img
-                className={classes.img}
-                src={card.img}
-                alt="Work example img"
-              ></img>
+              <a href={card.link} rel="noreferrer" target="_blank">
+                <img
+                  className={classes.img}
+                  src={card.img}
+                  alt="Work example img"
+                ></img>
+              </a>
             </div>
           );
         })}

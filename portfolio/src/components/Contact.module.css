@@ -40,20 +40,6 @@
 .textarea::placeholder {
   color: rgb(166 143 249);
 }
-.button {
-  width: 8rem;
-  height: 3rem;
-  color: rgb(166 143 249);
-  background: rgb(26, 28, 41);
-  border: 1px solid rgb(166 143 249);
-  cursor: pointer;
-}
-.button:hover {
-  transform: scale(1.01);
-
-  color: rgb(26, 28, 41);
-  background: rgb(166 143 249);
-}
 
 .contactFill {
   display: flex;
