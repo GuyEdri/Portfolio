@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,7 +7,8 @@ import WorkCard from "./components/WorkCard";
 import Contact from "./components/Contact";
 import cardImg from "./img/Hero.png";
 import cakeSite from "./img/cakeSite.png";
-import Scrolling from "./components/Scrolling";
+import Layout from "./Routing/Layout";
+import Home from "./components/Home";
 
 const card = [
   {
@@ -27,12 +29,14 @@ const card = [
 function App() {
   return (
     <Fragment>
-      <Navbar />
-      <Scrolling />
-      <Hero />
-      <About />
-      {/* <WorkCard cards={card} /> */}
-      <Contact />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="projects" element={<WorkCard cards={card} />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </Fragment>
   );
 }
