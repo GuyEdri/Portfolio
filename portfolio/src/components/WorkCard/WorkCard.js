@@ -1,12 +1,11 @@
 import classes from "./WorkCard.module.css";
-import { Fragment } from "react";
 
-const WorkCard = (props) => {
+const WorkCard = ({ cards }) => {
   return (
-    <Fragment>
+    <div>
       <h1 className={classes.myWork}>My Work</h1>
       <div className={classes.container}>
-        {props.cards.map((card) => {
+        {cards.map((card) => {
           return (
             <div className={classes.card} key={card.id}>
               <a href={card.link} rel="noreferrer" target="_blank">
@@ -20,7 +19,7 @@ const WorkCard = (props) => {
           );
         })}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

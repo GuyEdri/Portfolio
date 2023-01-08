@@ -1,7 +1,11 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com";
-import Modal from "../UI/Modal";
-import Button from "../UI/Button";
+
+import Modal from "../../UI/Modal/Modal";
+import Button from "../../UI/Button/Button";
+
+import classes from "./Contact.module.css";
+
 import {
   FaPaperPlane,
   FaPhoneSquareAlt,
@@ -9,7 +13,7 @@ import {
   FaFacebook,
   FaLinkedin,
 } from "react-icons/fa";
-import classes from "./Contact.module.css";
+
 const Contact = () => {
   const [modal, setModal] = useState(null);
 
@@ -55,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <Fragment>
+    <section id="hireMe">
       {modal && (
         <Modal
           title="Mail sent"
@@ -145,7 +149,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </Fragment>
+    </section>
   );
 };
 

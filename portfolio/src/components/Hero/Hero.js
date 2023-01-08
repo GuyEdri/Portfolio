@@ -1,9 +1,10 @@
-import { Fragment } from "react";
 import classes from "./Hero.module.css";
-import heroImg from "../img/Hero.png";
+
+import heroImg from "../../img/Hero.png";
+
 const Hero = () => {
   return (
-    <Fragment>
+    <section id="hero">
       <div className={classes.container}>
         <div className={classes.containerLeft}>
           <p className={classes.job}>Practical Software Engineer</p>
@@ -16,7 +17,7 @@ const Hero = () => {
           <img className={classes.img} src={heroImg} alt="Profile"></img>
         </div>
       </div>
-    </Fragment>
+    </section>
   );
 };
 
