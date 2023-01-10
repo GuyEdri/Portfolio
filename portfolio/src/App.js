@@ -6,6 +6,8 @@ import Home from "./components/Home/Home";
 
 import cardImg from "./img/Hero.png";
 import cakeSite from "./img/cakeSite.png";
+import GroupTel from "./img/GroupTel.png";
+import BikeStore from "./img/BikeStore.png";
 
 const card = [
   {
