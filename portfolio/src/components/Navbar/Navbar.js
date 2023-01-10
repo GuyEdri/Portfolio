@@ -12,6 +12,7 @@ const Navbar = () => {
         duration={1000}
         className={classes.button}
       >
+        {" "}
         &uarr;
       </ScrollLink>
       <ul className={classes.nav}>
