@@ -3,7 +3,7 @@ import classes from "./WorkCard.module.css";
 const WorkCard = ({ cards }) => {
   return (
     <div>
-      <h1 className={classes.myWork}>My Work</h1>
+      <h1 className={classes.myWork}>My Projects</h1>
       <div className={classes.container}>
         {cards.map((card) => {
           return (
@@ -15,6 +15,7 @@ const WorkCard = ({ cards }) => {
                   alt="Work example img"
                 ></img>
               </a>
+              <h2 className={classes.header}>{card.description}</h2>
             </div>
           );
         })}

@@ -12,6 +12,7 @@ import {
   FaInstagram,
   FaFacebook,
   FaLinkedin,
+  FaGithub,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -105,6 +106,14 @@ const Contact = () => {
               target="_blank"
             >
               <FaLinkedin className={classes.socialIcon} />
+            </a>
+            <a
+              className={classes.background}
+              href="https://github.com/GuyEdri"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FaGithub className={classes.socialIcon} />
             </a>
           </div>
           <Button onClick={onButtonClick}>Download CV</Button>

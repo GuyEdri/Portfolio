@@ -1,22 +1,26 @@
 .myWork {
-  margin: 9rem 0 4rem 8rem;
-  font-size: 4rem;
-  text-shadow: 0px 0px 3px #fff;
+  margin: 9rem 0 9rem 0;
+  font-size: 6rem;
+  text-shadow: 0px 0px 3px rgb(166 143 249);
+  text-align: center;
+  color: rgb(166 143 249);
 }
 .container {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 9.6rem;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 10% 9.6rem 10%;
 }
 .card {
-  width: 25%;
+  width: 100%;
   border-radius: 1.2rem;
   overflow: hidden;
   transition: 0.5s;
+  background-color: rgb(30 39 60);
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0px 0px 12px 0 rgb(188 188 245);
   cursor: pointer;
 }
@@ -26,4 +30,8 @@
   height: 100%;
   background-color: rgb(30 39 60);
   overflow: hidden;
+}
+.header {
+  margin: 1rem;
+  background-color: rgb(30 39 60);
 }
