@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import classes from "./About.module.css";
 
-import cardImg from "../../img/Hero.png";
+import cardImg from "../../img/Profile.png";
 
 const About = () => {
   const [skillStatus, updateSkillStatus] = useState(true);
@@ -31,7 +31,7 @@ const About = () => {
       <div className={classes.about}>
         <h1 className={classes.aboutHeader}>About Me</h1>
         <p className={classes.aboutText}>
-          Hi, My name is Guy, I am 28 years old, Practical software engineer
+          Hi, My name is Guy, I am 28 years old, Practical Software Engineer
           very interested in web development. Looking for a junior web developer
           position
         </p>
@@ -71,7 +71,7 @@ const About = () => {
             <p className={classes.seeHeader}>Web Development</p>
             <span className={classes.marginbot}>Web app Development</span>
             <p className={classes.seeHeader}>App Development</p>
-            <span className={classes.marginbot}>Building Android/IOS apps</span>
+            <span className={classes.marginbot}>Building Web apps</span>
           </div>
         )}
         {experienceStatus && (

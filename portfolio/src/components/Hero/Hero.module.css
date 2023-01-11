@@ -1,6 +1,7 @@
 * {
   font-family: sans-serif;
 }
+
 .container {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -29,5 +30,4 @@
 }
 .img {
   width: 100%;
-  z-index: -1;
 }
