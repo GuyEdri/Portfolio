@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import classes from "./About.module.css";
-
 import cardImg from "../../img/Profile.png";
 
 const About = () => {
