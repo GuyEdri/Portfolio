@@ -128,7 +128,7 @@ const Contact = () => {
               required
               id="Name"
               name="from_name"
-              placeholder="Your Name"
+              placeholder="Name"
               value={toSend.from_name}
               onChange={handleChange}
             ></input>
@@ -139,7 +139,7 @@ const Contact = () => {
               required
               id="Email"
               name="reply_to"
-              placeholder="Your Email"
+              placeholder="Email"
               value={toSend.reply_to}
               onChange={handleChange}
             ></input>
@@ -150,7 +150,7 @@ const Contact = () => {
               id="Message"
               name="message"
               rows="10"
-              placeholder="Your Message"
+              placeholder="Message"
               value={toSend.message}
               onChange={handleChange}
             ></textarea>
