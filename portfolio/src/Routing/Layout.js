@@ -11,7 +11,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-//-------------------------------------------------------------------------------------
-// onClick={scrollToSkills}
-// onClick={scrollToHireMe}
